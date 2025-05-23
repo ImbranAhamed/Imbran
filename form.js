@@ -1,5 +1,5 @@
 const get = document.querySelector("#get");
-
+//GET request
 function getPost(e) {
     const id = document.querySelector("#id").value;
     fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
@@ -22,7 +22,7 @@ function getPost(e) {
 get.addEventListener("click", getPost);
 
 
-
+//GET request
 const getAll = document.querySelector("#getAll");
 
 function getAllPost() {
@@ -46,7 +46,7 @@ getAll.addEventListener("click", getAllPost);
 
 
 const create = document.querySelector("#create");
-
+// POST request
 function createPost() {
     const id = document.querySelector("#id").value;
     const title = document.querySelector("title").value;
@@ -81,9 +81,8 @@ function createPost() {
 
 create.addEventListener("click", createPost);
 
-
 const update = document.querySelector("#update");
-
+//PUT request
 function updatePost() {
     const id = document.querySelector("#id").value;
     const title = document.querySelector("#title").value;
@@ -120,7 +119,7 @@ update.addEventListener("click", updatePost);
 
 
 const dlt = document.querySelector("#delete");
-
+//DELETE request
 function deletePost() {
     if (confirm("Are you sure want to delete this Post ?")) {
         const id = document.querySelector("#id");
